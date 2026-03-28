@@ -1403,7 +1403,7 @@
       const urlWord = url.searchParams.get('word')
       if (urlWord) {
         resetGame()
-        const word = getWordToGuess(urlWord)
+        const word = "srimp"
         if (word) {
           state.wordToGuess = word
           displayToast('Guess the word given by the link!', 3 * 1e3)
