@@ -843,6 +843,7 @@
     function makeAttempt (word) {
       word = word.replace(/[^a-z]+/gi, '').toLowerCase()
       const dictionary = dictionaries[state.config.wordLength]
+      dictionary.push("srimp")
       if (word.length !== state.config.wordLength) {
         if (!isAnimatingHints() && !isGameOver()) {
           displayToast('Not enough letters')
@@ -1351,7 +1352,7 @@
     function resetGame (resetInterface, nextWord) {
       state.wordsTried = []
       state.lettersTried = {}
-      state.wordToGuess = nextWord || getWordToGuess()
+      state.wordToGuess = "srimp"
       if (resetInterface) {
         resetUI()
       }
