@@ -843,8 +843,8 @@
     function makeAttempt (word) {
       word = word.replace(/[^a-z]+/gi, '').toLowerCase()
       const dictionary = dictionaries[state.config.wordLength]
-      dictionary.wordsGuessable.prototype.add("srimp")
-      dictionary.wordsAcceptable.prototype.add("srimp")
+      dictionary.wordsGuessable.add("srimp")
+      dictionary.wordsAcceptable.add("srimp")
       if (word.length !== state.config.wordLength) {
         if (!isAnimatingHints() && !isGameOver()) {
           displayToast('Not enough letters')
@@ -883,8 +883,8 @@
 
     function getPossibleWordsLeft () {
       const dictionary = dictionaries[state.config.wordLength]
-      dictionary.wordsGuessable.protoype.add("srimp")
-      dictionary.wordsAcceptable.prototype.add("srimp")
+      dictionary.wordsGuessable.add("srimp")
+      dictionary.wordsAcceptable.add("srimp")
       const stateToConsider = isGameOver() ? state.previousAttemptState : state
       return [
         dictionary.wordsGuessable,
